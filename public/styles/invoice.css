@@ -1,0 +1,472 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fb; /* Soft background color */
+    color: #4a4a4a; /* Dark gray text for better contrast */
+}
+
+/* Sidebar (Navbar) */
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.1); /* Softer shadow for modern look */
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+}
+
+.fixed .h-40 {
+    height: 180px;
+    padding: 1.5rem;
+    background-color: #66bb6a;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+}
+
+.fixed .h-40 i {
+    margin-right: 1rem;
+}
+
+.fixed .grow {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.fixed ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.fixed li {
+    margin-bottom: 1rem;
+}
+
+.fixed a {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+    margin: 8px 0;
+}
+
+.fixed a:hover {
+    background-color: #e8f5fe;
+}
+
+.fixed a i {
+    margin-right: 12px;
+    font-size: 1.5rem;
+}
+
+.fixed a:hover i {
+    color: #66bb6a;
+}
+
+/* Invoice Content Section */
+.ml-56 {
+    margin-left: 240px; /* Adjusted to fit the sidebar width */
+}
+
+.flex-grow {
+    flex-grow: 1;
+    padding: 24px;
+}
+
+/* Invoice Data Section */
+.invoice-data {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.invoice-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.invoice-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.invoice-card h3 {
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.invoice-card p {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+/* Invoice Form Section */
+/* Invoice Form Styles */
+.invoice-form {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.invoice-form h2 {
+    font-size: 2rem;
+    color: #2d2d2d;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.invoice-form input,
+.invoice-form select,
+.invoice-form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+/* Custom Styles for Form Elements */
+.form-control {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.input input,
+.input select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.input i {
+    margin-right: 8px;
+    font-size: 1.3rem;
+}
+
+/* Select & Input Focus */
+.invoice-form select:focus,
+.invoice-form input[type="text"]:focus,
+.invoice-form input[type="number"]:focus,
+.invoice-form textarea:focus {
+    outline: none;
+    border-color: #66bb6a; /* Green focus border */
+    box-shadow: 0 0 5px rgba(102, 187, 106, 0.5); /* Green glow on focus */
+}
+
+/* Radio Button & Status Badges */
+.input .radio {
+    margin-right: 8px;
+}
+
+.badge {
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.badge-ghost {
+    background-color: #f0f0f0;
+}
+
+.badge-success {
+    background-color: #66bb6a;
+    color: white;
+}
+
+.input .badge {
+    margin-right: 10px;
+}
+
+.flex {
+    display: flex;
+    gap: 16px;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.mt-6 {
+    margin-top: 24px;
+}
+
+.gap-4 {
+    gap: 16px;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #66bb6a;
+    color: white;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #4caf50; /* Darker green on hover */
+}
+
+.btn-ghost {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    color: #333;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-ghost:hover {
+    background-color: #f4f7fb;
+}
+a{
+    text-decoration: none;
+}
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .invoice-form {
+        padding: 20px;
+    }
+
+    .invoice-form input,
+    .invoice-form select,
+    .invoice-form textarea {
+        font-size: 0.9rem;
+    }
+
+    .invoice-form button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .invoice-form {
+        padding: 16px;
+    }
+
+    .invoice-form input,
+    .invoice-form select,
+    .invoice-form textarea {
+        font-size: 0.85rem;
+    }
+
+    .invoice-form button {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .fixed {
+        width: 220px;
+    }
+
+    .ml-56 {
+        margin-left: 220px;
+    }
+
+    .invoice-data {
+        gap: 16px;
+    }
+
+    .invoice-card {
+        padding: 16px;
+    }
+
+    .invoice-form {
+        padding: 24px;
+    }
+
+    .invoice-form input,
+    .invoice-form select,
+    .invoice-form textarea {
+        font-size: 0.9rem;
+    }
+
+    .invoice-form button {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .fixed {
+        width: 200px;
+    }
+
+    .ml-56 {
+        margin-left: 200px;
+    }
+
+    h1, h2 {
+        font-size: 1.8rem;
+    }
+
+    .invoice-data {
+        gap: 12px;
+    }
+
+    .invoice-card {
+        padding: 14px;
+    }
+
+    .invoice-form {
+        padding: 20px;
+    }
+
+    .invoice-form input,
+    .invoice-form select,
+    .invoice-form textarea {
+        font-size: 0.85rem;
+    }
+
+    .invoice-form button {
+        font-size: 1rem;
+    }
+}
+
+/* Invoice Form Custom Styles */
+.invoice-form select,
+.invoice-form input[type="text"],
+.invoice-form input[type="number"],
+.invoice-form textarea {
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    padding: 12px;
+    font-size: 1rem;
+}
+
+.invoice-form select:focus,
+.invoice-form input[type="text"]:focus,
+.invoice-form input[type="number"]:focus,
+.invoice-form textarea:focus {
+    outline: none;
+    border-color: #66bb6a; /* Green focus border */
+    box-shadow: 0 0 5px rgba(102, 187, 106, 0.5); /* Green glow on focus */
+}
+
+.invoice-form button {
+    background-color: #66bb6a;
+    color: white;
+    font-size: 1.2rem;
+    padding: 14px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.invoice-form button:hover {
+    background-color: #4caf50; /* Darker green on hover */
+}
+
+/* Invoice Data Table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #f4f7fb;
+    color: #333;
+    font-weight: 600;
+}
+
+.table td {
+    background-color: #ffffff;
+    color: #333;
+}
+
+.table td span.badge {
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.table td span.badge-success {
+    background-color: #66bb6a;
+    color: white;
+}
+
+.table td span.badge-ghost {
+    background-color: #f0f0f0;
+}
+
+.table td .action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.table td .action-buttons a,
+.table td .action-buttons button {
+    padding: 8px;
+    background-color: #f4f7fb;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.table td .action-buttons a:hover,
+.table td .action-buttons button:hover {
+    background-color: #e8f5fe;
+}

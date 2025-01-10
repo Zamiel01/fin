@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('../partials/head') %>
+<link href="/styles/wel.css" rel="stylesheet" />
 <body class="bg-gray-100">
   <div class="flex h-screen overflow-hidden">
     <%- include('../partials/navbar') %>
@@ -69,7 +70,7 @@
                   <p class="truncate font-semibold text-base">
                     <%= invoice.customer.name %>
                   </p>
-                  <p class="hidden text-sm text-slate-1000 sm:block">
+                 <span class="stat"><p class="hidden text-sm text-slate-1000 sm:block">
                     <% if(invoice.status === 'paid') { %>
                     <span class="ml-2 badge badge-sm badge-success p-3 gap-3 text-white">
                       Paid <i class="fa-regular fa-circle-check"></i>
@@ -79,7 +80,7 @@
                       Pending <i class="fa-regular fa-clock"></i>
                     </span>
                     <% } %>
-                  </p>
+                  </p></span>
                 </div>
                 <p class=" truncate font-medium">
                   <%= USDollar.format(invoice.amount) %>

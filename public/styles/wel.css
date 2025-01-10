@@ -1,0 +1,300 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fb;
+    color: #4a4a4a;
+}
+
+/* Sidebar (Navbar) */
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* Sidebar is slightly larger */
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    transition: width 0.3s ease;
+}
+
+.fixed .h-40 {
+    height: 180px;
+    padding: 1.5rem;
+    background-color: #66bb6a;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+}
+
+.fixed .grow {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.fixed ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.fixed li {
+    margin-bottom: 1rem;
+}
+
+.fixed a {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+    margin: 8px 0;
+}
+
+.fixed a:hover {
+    background-color: #e8f5fe;
+}
+
+.fixed a i {
+    margin-right: 12px;
+    font-size: 1.5rem;
+}
+
+.fixed a:hover i {
+    color: #66bb6a;
+}
+
+/* Responsive Sidebar */
+@media (max-width: 1024px) {
+    .fixed {
+        width: 200px; /* Slightly smaller width on medium screens */
+    }
+}
+
+/* Content Section */
+.ml-56 {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.flex-grow {
+    flex-grow: 1;
+    padding: 24px;
+}
+
+h1, h2 {
+    font-size: 2.2rem;
+    color: #2d2d2d;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: #7f8c8d;
+    font-weight: 400;
+}
+
+/* Card Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Flexible grid layout */
+    gap: 40px;
+}
+
+.grid .rounded-xl {
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid .rounded-xl:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.grid .text-center {
+    text-align: center;
+}
+
+.grid .truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.grid .text-2xl {
+    font-size: 2rem;
+    color: #2d2d2d;
+}
+
+.grid .text-sm {
+    font-size: 1.1rem;
+    color: #95a5a6;
+}
+
+/* Revenue Chart Section */
+#revenueChart {
+    width: 100%;
+    height: 350px; /* Make the chart more flexible */
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Invoice Section */
+/* Invoice Section */
+.flex-row {
+    display: flex;
+    justify-content: space-between;  /* Space out items evenly, badge on the right */
+    align-items: center;  /* Align items vertically */
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Allow wrapping of items to avoid squeezing */
+    gap: 20px; /* Add space between elements */
+}
+
+.flex-row:hover {
+    background-color: #f0faff;
+    cursor: pointer;
+}
+
+.flex-row:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+/* Font Style */
+.font-semibold {
+    font-weight: 700;
+    font-size: 1.4rem; /* Slightly larger font for readability */
+    color: #2d2d2d;
+    min-width: 150px; /* Ensure minimum space for text */
+    flex-shrink: 0;  /* Prevents shrinking of this element */
+    margin-right: 20px;  /* Provide space between items */
+    flex: 1 1 auto; /* Allows flexible space usage, ensuring it doesn't get squeezed */
+}
+
+.text-base {
+    font-size: 1.2rem;
+    color: #555555;
+    min-width: 120px; /* Prevents squeezing of text */
+    flex-shrink: 0;  /* Prevents shrinking of this element */
+    margin-right: 20px;
+    flex: 1 1 auto; /* Ensures space usage without overlapping */
+}
+
+.badge {
+    font-size: 1.1rem;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-weight: 600;
+    min-width: 100px; /* Badge should be at least this wide */
+    text-align: center; /* Ensures text inside badge is centered */
+    flex-shrink: 0;  /* Prevents shrinking */
+    order: 2; /* Ensure badge is always on the right */
+}
+
+.badge-success {
+    background-color: #66bb6a;
+    color: white;
+}
+
+.badge-ghost {
+    background-color: #ecf0f1;
+    color: #7f8c8d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .flex-row {
+        flex-direction: column;  /* Stack items vertically on small screens */
+        padding: 15px;  /* Reduce padding */
+        gap: 10px;  /* Reduce space between items */
+    }
+
+    .font-semibold {
+        font-size: 1.3rem;  /* Slightly smaller font */
+        min-width: 100%;  /* Allow full-width for small screens */
+    }
+
+    .text-base {
+        font-size: 1rem;
+        min-width: 100%;  /* Allow full-width for small screens */
+    }
+
+    .badge {
+        font-size: 1rem; /* Adjust font size for small screens */
+        padding: 8px 16px;
+        min-width: 90px;  /* Adjust badge size for small screens */
+        order: 0; /* Ensure badge comes last when stacked */
+    }
+}
+
+
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 768px) {
+    .ml-56 {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr 1fr; /* Two columns on smaller screens */
+        gap: 20px;
+    }
+
+    .grid .rounded-xl {
+        padding: 16px; /* Reduced padding for smaller screens */
+    }
+
+    h1, h2 {
+        font-size: 1.8rem; /* Smaller text on mobile */
+    }
+
+    .flex-row {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+
+    .flex-row .font-semibold {
+        font-size: 1.2rem;
+    }
+
+    .flex-row .badge {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    #revenueChart {
+        height: 250px; /* Reduced chart height for small screens */
+    }
+}
+.stat{
+    position: relative;
+    left: 90px;
+    top: 20px;
+    width: 20%;
+}

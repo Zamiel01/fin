@@ -1,0 +1,166 @@
+/* General reset for consistent appearance across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styling */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eafaf1; /* Light green background */
+    color: #333; /* Neutral text color */
+    line-height: 1.6;
+  }
+  
+  /* Centering the signup container */
+  main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff; /* White background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Header section styling */
+  div.flex.h-24 {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #27ae60; /* Green header background */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+  }
+  
+  div.flex.h-24 p {
+    font-size: 36px;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  /* Form styling */
+  form {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  form h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+  }
+  
+  label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  label input {
+    flex-grow: 1;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+  }
+  
+  label input:focus {
+    outline: none;
+  }
+  
+  label i {
+    font-size: 18px;
+    color: #27ae60; /* Icon color */
+  }
+  
+  /* Button styling */
+  button {
+    background-color: #27ae60; /* Green button background */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: #219150; /* Darker green on hover */
+  }
+  
+  button i {
+    margin-left: 10px;
+    font-size: 18px;
+  }
+  
+  /* Footer link styling */
+  span {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  span a {
+    color: #27ae60;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  span a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    main {
+      padding: 15px;
+    }
+  
+    div.flex.h-24 p {
+      font-size: 28px;
+    }
+  
+    form h1 {
+      font-size: 20px;
+    }
+  
+    button {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    div.flex.h-24 {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+  
+    div.flex.h-24 p {
+      font-size: 24px;
+      margin-left: 0;
+    }
+  
+    form h1 {
+      font-size: 18px;
+    }
+  
+    button {
+      font-size: 12px;
+    }
+  }
+  
